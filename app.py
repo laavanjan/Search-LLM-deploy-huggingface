@@ -13,7 +13,6 @@ load_dotenv()
 # Securely retrieve API keys from environment variables
 GROQ_API_KEY = "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"
 
-
 # Set environment variables for LangChain tracking
 os.environ["LANGCHAIN_API_KEY"] = "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"
 os.environ["LANGCHAIN_TRACING_V2"] = "true"
@@ -50,7 +49,11 @@ if prompt := st.chat_input(placeholder="What is machine learning?"):
 
     with st.chat_message("assistant"):
         st_cb = StreamlitCallbackHandler(st.container(), expand_new_thoughts=True)
-        response = search_agent.run(st.session_state.messages, callbacks=[st_cb])
-        st.session_state.messages.append({'role': 'assistant', "content": response})
-        st.write(response)
-
+        try:
+            response = search_agent.run(st.session_state.messages, callbacks=[st_cb])
+            st.session_state.messages.append({'role': 'assistant', "content": response})
+            st.write(response)
+        except Exception as e:
+            error_message = f"An error occurred while retrieving results: {e}"
+            st.write(error_message)
+            st.session_state.messages.append({'role': 'assistant', "content": error_message})
