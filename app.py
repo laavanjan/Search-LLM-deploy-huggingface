@@ -62,7 +62,7 @@ st.markdown(
             position: fixed;
             bottom: 0;
             left: 0;
-            width: 100%;
+            width: 50%;
             background: linear-gradient(135deg, #6a82fb, #fc5c7d);
             color: white;
             text-align: center;
