@@ -21,6 +21,11 @@ jobs:
           git config --global user.email "laavanjanlaa@gmail.com"
           git config --global user.name "Laavanjan"
 
+      - name: Set Environment Variables
+        run: |
+          echo "GROQ_API_KEY=${{ secrets.GROQ_API_KEY }}" >> $GITHUB_ENV
+          echo "LANGCHAIN_API_KEY=${{ secrets.LANGCHAIN_API_KEY }}" >> $GITHUB_ENV
+
       - name: Pull Latest Changes (Avoid Conflicts)
         run: |
           git pull --rebase https://user:${{ secrets.HF_TOKEN }}@huggingface.co/spaces/Laavanjan/Search_Engine_llm main || echo "No updates needed"
