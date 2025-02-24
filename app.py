@@ -11,19 +11,13 @@ from langchain.callbacks import StreamlitCallbackHandler
 load_dotenv()
 
 # Securely retrieve API keys from environment variables
-GROQ_API_KEY = os.getenv("GROQ_API_KEY")
-LANGCHAIN_API_KEY = os.getenv("LANGCHAIN_API_KEY")
-LANGCHAIN_PROJECT = os.getenv("LANGCHAIN_PROJECT")
+GROQ_API_KEY = "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"
 
-# Ensure API keys exist before continuing
-if not GROQ_API_KEY or not LANGCHAIN_API_KEY:
-    st.error("❌ API keys are missing. Please check GitHub Secrets.")
-    st.stop()
 
 # Set environment variables for LangChain tracking
-os.environ["LANGCHAIN_API_KEY"] = LANGCHAIN_API_KEY
+os.environ["LANGCHAIN_API_KEY"] = "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"
 os.environ["LANGCHAIN_TRACING_V2"] = "true"
-os.environ["LANGCHAIN_PROJECT"] = LANGCHAIN_PROJECT
+os.environ["LANGCHAIN_PROJECT"] = "Chatbot with webSearch"
 
 # Arxiv and Wikipedia Tools
 arxiv_wrapper = ArxivAPIWrapper(top_k_results=1, doc_content_chars_max=200)
