@@ -28,7 +28,7 @@ wiki = WikipediaQueryRun(api_wrapper=wiki_wrapper)
 
 search = DuckDuckGoSearchRun(name="Search")
 
-st.title("🔎 Search Bot")
+st.title("🔎 Search Bot By Laavanjan")
 
 # Chat history initialization
 if "messages" not in st.session_state:
@@ -54,31 +54,3 @@ if prompt := st.chat_input(placeholder="What is machine learning?"):
         st.session_state.messages.append({'role': 'assistant', "content": response})
         st.write(response)
 
-# Footer
-st.markdown(
-    """
-    <style>
-        .footer {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 50%;
-            background: linear-gradient(135deg, #6a82fb, #fc5c7d);
-            color: white;
-            text-align: center;
-            padding: 12px;
-            font-size: 14px;
-            font-family: Arial, sans-serif;
-            border-top: 2px solid #ffffff33;
-            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
-            z-index: 1000;
-        }
-        .footer b { color: #e0fffc; font-size: 16px; transition: color 0.3s ease; }
-        .footer b:hover { color: #ffdd00; }
-    </style>
-    <div class="footer">
-        Developed by <b>Laavanjan</b> | © Faculty of IT B22
-    </div>
-    """,
-    unsafe_allow_html=True
-)
