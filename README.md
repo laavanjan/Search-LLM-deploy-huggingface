@@ -1,13 +1,12 @@
 
 # 🔎 Search-LLM-Deploy-HuggingFace
 
-
 ![Python](https://img.shields.io/badge/Python-3.11-blue)
 ![LangChain](https://img.shields.io/badge/LangChain-Enabled-brightgreen)
 ![Streamlit](https://img.shields.io/badge/Streamlit-App-red)
 ![Groq API](https://img.shields.io/badge/Groq-API-purple)
 ![Hugging Face Space](https://img.shields.io/badge/HuggingFace-Space-blue)
-
+![Alt Text](img1.png)
 A chatbot that leverages Large Language Models (LLMs) to perform real-time web searches using LangChain, Groq API, and various search tools. This project is deployed on **Hugging Face Spaces**.
 
 ## 🚀 Live Demo
@@ -67,6 +66,11 @@ Try the chatbot here: **[Search Engine LLM](https://huggingface.co/spaces/Laavan
 ## 🖼️ Demo Images
 
 *(Screenshots of the chatbot in action will be added here)*
+| ![Image 1](img1.png) | ![Image 2](img2.png) | ![Image 3](img3.png) |
+|-------------------------------|-------------------------------|-------------------------------|
+| ![Image 4](img4.png) | ![Image 5](img5.png) | ![Image 6](img6.png) |
+
+
 
 ## 📝 License
 
